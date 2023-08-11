@@ -1,14 +1,47 @@
 package intra.uninga.mobile;
 
-import androidx.appcompat.app.AppCompatActivity;
+ import android.content.Intent;
+ import android.os.Bundle;
+ import android.view.View;
+ import android.widget.Button;
 
-import android.os.Bundle;
+         import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+        public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+         private Button formButton;
+ private Button listButton;
+
+         @Override
+ protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+         setContentView(R.layout.activity_main);
+
+         formButton = findViewById(R.id.formButton);
+         listButton = findViewById(R.id.listButton);
+
+         formButton.setOnClickListener(new View.OnClickListener() {
+ @Override
+ public void onClick(View v) {
+                 openFormActivity();
+                 }
+ });
+
+         listButton.setOnClickListener(new View.OnClickListener() {
+ @Override
+ public void onClick(View v) {
+                 openListActivity();
+                 }
+ });
+         }
+
+         private void openFormActivity() {
+        Intent intent = new Intent(this, FormActivity.class);
+         startActivity(intent);
+         }
+
+         private void openListActivity() {
+         Intent intent = new Intent(this, ListActivity.class);
+         startActivity(intent);
+         }
 }
