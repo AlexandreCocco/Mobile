@@ -8,15 +8,15 @@
     android:padding="16dp"
      tools:context=".MainActivity">
 
-     <TextView
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:text="Selecione uma opção:"
-     android:textSize="18sp"
-     android:textStyle="bold"
-     android:layout_marginBottom="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Selecione uma opção:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-     <Button
+    <Button
      android:id="@+id/formButton"
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
